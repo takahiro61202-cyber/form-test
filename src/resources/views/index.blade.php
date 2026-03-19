@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="fashion__content">
-    <form class="create-form" action="" method="post">
+    <form class="create-form" action="/confirm" method="post">
         @csrf
         <div class="title">
             FashionablyLate
@@ -90,7 +90,10 @@
             <div class="create-form__content">
                 <select name="select"  name="">
                     <option value="選択してください">選択してください</option>
-                    <option value=""></option>
+                    <option value="id">id</option>
+                    <option value="content">content</option>
+                    <option value="created_at">created_at</option>
+                    <option value="updated_at">updated_at</option>
                 </select>
             </div>
             <div class="create-form__title">
@@ -109,8 +112,7 @@
                     確認画面
                 </button>
             </div>
-            <input type="submit" value="">
-            確認画面
+            
         </div>
 
         </div>
