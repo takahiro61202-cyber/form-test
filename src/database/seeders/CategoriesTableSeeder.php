@@ -15,14 +15,14 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         $param = [
-            'id'=>'90',
+            'id'=>'1',
             'content' =>'imo',
             
             ];
 
          DB::table('categories')->insert($param);
          $param = [
-            'id'=>'99',
+            'id'=>'2',
             'content' =>'hakusai',
           ];
 

@@ -18,7 +18,8 @@ Route::get('/', [TestController::class, 'index']);
 
 Route::post('/confirm', [TestController::class, 'confirm']);
 
-Route::get('/thanks', [TestController::class, 'thanks']);
+Route::post('/thanks', [TestController::class, 'thanks']);
+
 
 Route::get('/admin', [TestController::class, 'admin']);
 

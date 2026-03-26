@@ -21,7 +21,10 @@
                 </span>
             </div>
             <div class="create-form__content">
-                <input type="text" name="name">
+                <input type="text" name="first_name">
+            </div>
+            <div class="create-form__content">
+                <input type="text" name="last_name">
             </div>
         </div>
         <div class="create-form__group">
@@ -34,15 +37,15 @@
                 </span>
             </div>
             <div class="create-form__content">
-                <input type="radio" name="gender" value="male">
+                <input type="radio" name="gender" value="1">
                 <span class="create-form__label--item">
                     男性
                 </span>
-                <input type="radio" name="gender" value="female">
+                <input type="radio" name="gender" value="2">
                 <span class="create-form__label--item">
                     女性
                 </span>
-                <input type="radio" name="name">
+                <input type="radio" name="gender" value="3">
                 <span class="create-form__label--item">
                     その他
                 </span>
@@ -57,6 +60,23 @@
             </div>
             <div class="create-form__content">
                 <input type="email" name="email">
+            </div>
+            <div class="create-form__title">
+                <span class="create-form__label--item">
+                    電話番号
+                </span>
+                <span class="create-form__label--required">
+                    ※
+                </span>
+            </div>
+            <div class="create-form__content">
+                <input type="tel" name="tel">
+
+                <!--<div class="create-form__content">
+                <input type="tel" name="telB">
+
+                <div class="create-form__content">
+                <input type="tel" name="telC">-->
             </div>
         </div>
         <div class="create-form__title">
@@ -88,12 +108,17 @@
                 </span>
             </div>
             <div class="create-form__content">
-                <select name="select"  name="">
+                <select name="selct" name="">
                     <option value="選択してください">選択してください</option>
-                    <option value="id">id</option>
-                    <option value="content">content</option>
-                    <option value="created_at">created_at</option>
-                    <option value="updated_at">updated_at</option>
+                    {{--@foreach ($categories as $category)
+                    <option value="{{ $categories->id }}">
+                    {{ $category->content }}
+                      
+                        
+                      
+                    @endforeach
+                    --}}
+
                 </select>
             </div>
             <div class="create-form__title">
@@ -105,7 +130,8 @@
                 </span>
             </div>
             <div class="create-form__content">
-                <input type="text" name="email">
+                <textarea type="text" name="detail">
+            </textarea>
             </div>
             <div class="form__button">
                 <button class="form__button-submit" type="submit">
