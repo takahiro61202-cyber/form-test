@@ -83,14 +83,16 @@
             </div>
             <div class="create-form__content">
                 <input type="tel" name="telA">
-
+                @if ($errors->has('telA')) 
+            <div style="color:red">{{ $errors->first('telA') }}</div>
+            @endif
                 <div class="create-form__content">
                 <input type="tel" name="telB">
 
                 <div class="create-form__content">
                 <input type="tel" name="telC">
             </div>
-            <!-- @if ($errors->has('first_name')) 
+            <!-- @if ($errors->has('tel')) 
             <div style="color:red">{{ $errors->first('first_name') }}</div>
             @endif-->
         </div>

@@ -28,7 +28,8 @@ class ContactRequest extends FormRequest
             'last_name'=>'required',
             'gender'=>'required',
             'email'=>'required|email',
-            'telA'=>'required|regex:/^[0-9]+$/',
+            // 電話番号を０～９のいずれかの文字が5個以内で続く
+             'telA'=>'required|regex:/^[0-9]+$/',
             'telB'=>'required|regex:/^[0-9]+$/',
             'telC'=>'required|regex:/^[0-9]+$/',
             'address'=>'required',
@@ -54,16 +55,12 @@ class ContactRequest extends FormRequest
             'telB.regex:/^[0-9]+$/.'=>'電話番号は半角英数字で入力してください',
             'telC.regex:/^[0-9]+$/.'=>'電話番号は半角英数字で入力してください',
             'telA.'=>'電話番号は5桁まで数字で入力してください',
-            'telB.required'=>'電話番号は5桁まで数字で入力してください',
-            'telC.required'=>'電話番号は5桁まで数字で入力してください',
+            'telB.'=>'電話番号は5桁まで数字で入力してください',
+            'telC.'=>'電話番号は5桁まで数字で入力してください',
             'address.required'=>'住所を入力してください',
             'category_id.required'=>'お問い合わせの種類を選択してください',
             'detail.required'=>'お問い合わせ内容を入力してください',
             'detail.max'=>'お問い合わせ内容は120文字以内で入力してください',
-
-            'tel.max'=>'電話番号は5桁で入力してください',
-            
-            
 
         ];
     }
