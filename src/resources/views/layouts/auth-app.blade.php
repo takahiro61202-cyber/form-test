@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo</title>
   <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/common.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/auth-common.css') }}">
   <link rel="stylesheet" href="{{ asset('css/index.css') }}">
   @yield('css')
 </head>
@@ -16,14 +16,14 @@
   <header class="header">
     <div class="header__inner">
       <h1 class="header__logo" href="/">
-        FashionablyLate
+        Fashionablylate
       </h1>
+    </div>
+    <div class="page-links">
+    @yield('links')
     </div>
   </header>
 
- <h2 class="main__font">
-   @yield('page_title', 'Fashionablylate')
- </h2> 
 
   <main>
     @yield('content')

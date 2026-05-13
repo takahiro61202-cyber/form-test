@@ -1,5 +1,23 @@
 .header__logo{
-    color: brown;
-    font-size: medium
+    color: burlywood;
+    display: flex;
+    justify-content: center;
 
 };
+
+.create-form__label--name{
+    display: flex;
+    justify-content: center;
+}
+
+.create-form__label--required {
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+.main__font{
+    color:burlywood;
+    display: flex;
+    justify-content: center;
+
+}

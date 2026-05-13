@@ -9,4 +9,18 @@ class Contact extends Model
 {
     use HasFactory;
     protected $fillable = ['first_name', 'last_name', 'gender', 'email', 'tel','address', 'building', 'detail', 'category_id'];
+
+    public function category()
+    {
+        return $this->belongsTo(Categories::class);
+    }
+
+    public function getGenderLabelAttribute()
+    {
+    return [
+        1 => '男性',
+        2 => '女性',
+        3 => 'その他',
+    ][$this->gender] ?? '不明';
+    }
 }

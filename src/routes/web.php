@@ -20,8 +20,7 @@ Route::post('/confirm', [TestController::class, 'confirm']);
 
 Route::post('/thanks', [TestController::class, 'thanks']);
 
-
-Route::get('/admin', [TestController::class, 'admin']);
+Route::get('/admin', [TestController::class, 'admin'])->name('admin');;
 
 Route::get('/search', [TestController::class, 'search']);
 
@@ -29,10 +28,7 @@ Route::get('/reset', [TestController::class, 'reset']);
 
 Route::get('/delete', [TestController::class, 'delete']);
 
-Route::get('/register', [TestController::class, 'register']);
 
-Route::get('/login', [TestController::class, 'login']);
-Route::get('/logout', [TestController::class, 'logout']);
 Route::get('/export', [TestController::class, 'export']);
 
 

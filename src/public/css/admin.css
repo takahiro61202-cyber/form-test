@@ -1,0 +1,47 @@
+.search{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+}
+
+.search,
+.search-gender,
+.search-detail,
+.search-date,
+.search-button,
+.reset-button{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+}
+
+.admin__table--head{
+    color: white;
+    background-color: burlywood;
+    margin: 0px auto;
+}
+.admin__table{
+    margin: 0px auto;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination p {
+    display: none;
+}
+
+
+  svg.w-5.h-5 {
+      width: 30px;
+      height: 30px;
+  }
+
+.logout__button{
+    
+}

@@ -1,0 +1,24 @@
+.confirm {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.confirm-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.table__title{
+    background-color: burlywood;
+    color: white;
+}
+
+
+.send {
+    background-color: rgb(71, 44, 7);
+    color: white;
+}
+
+.mod {}

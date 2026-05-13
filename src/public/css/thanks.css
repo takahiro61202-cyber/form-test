@@ -1,0 +1,16 @@
+.thanks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 300px;
+
+    }
+
+.thanks__box{
+    background-color: rgb(71, 44, 7);
+    color: white;
+    height: 30px;
+    width: 100px;
+    display: block;
+    margin: auto;
+}
