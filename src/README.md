@@ -6,6 +6,7 @@
 
 ### 1 リポジトリをクローンする
 
+'''bash
 git clone https://github.com/takahiro61202-cyber/form-test.git
 
 ### 2 Dockerのコンテナを作成します
@@ -21,24 +22,25 @@ composer install
 
 cp .env.example .env
 
-### 5 envファイルの下記の欄を―表記の行を+表記の行のように修正してください
+### 5 envファイルの下記の欄を修正してください
 
 // 前略
 
 DB_CONNECTION=mysql
 
-- DB_HOST=127.0.0.1
+# before
 
-* DB_HOST=mysql
-  DB_PORT=3306
+DB_HOST=127.0.0.1
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
 
-- DB_DATABASE=laravel
-- DB_USERNAME=root
-- DB_PASSWORD=
+# after
 
-* DB_DATABASE=laravel_db
-* DB_USERNAME=laravel_user
-* DB_PASSWORD=laravel_pass
+DB_HOST=mysql
+DB_DATABASE=laravel_db
+DB_USERNAME=laravel_user
+DB_PASSWORD=laravel_pass
 
 // 後略
 
@@ -46,6 +48,7 @@ DB_CONNECTION=mysql
 
 php artisan migrate
 ここでデーターベースに作成されているか確認することをおすすめします
+s
 
 ### 7 シーディング実施してください
 
