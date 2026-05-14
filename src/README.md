@@ -24,8 +24,6 @@ cp .env.example .env
 
 ### 5 envファイルの下記の欄を修正してください
 
-// 前略
-
 DB_CONNECTION=mysql
 
 # before
@@ -41,8 +39,6 @@ DB_HOST=mysql
 DB_DATABASE=laravel_db
 DB_USERNAME=laravel_user
 DB_PASSWORD=laravel_pass
-
-// 後略
 
 ### 6 マイグレーションを実施してください
 
