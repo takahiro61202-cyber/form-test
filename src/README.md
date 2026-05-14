@@ -1,64 +1,68 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# FashionablyLate-form
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+    テスト用の入力フォームです
 
-## About Laravel
+## 環境構築
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 1 リポジトリをクローンする
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+    git clone https://github.com/takahiro61202-cyber/form-test.git
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 2 Dockerのコンテナを作成します
 
-## Learning Laravel
+    docker-compose up -d --build
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 3 phpコンテナにログインしてコンポーザーをインストールしてください
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    docker-compose exec php bash
+    composer install
 
-## Laravel Sponsors
+### 4 envファイルを作成してください
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    cp .env.example .env
 
-### Premium Partners
+### 5 envファイルの下記の欄を―表記の行を+表記の行のように修正してください
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+    // 前略
 
-## Contributing
+    DB_CONNECTION=mysql
+    - DB_HOST=127.0.0.1
+    + DB_HOST=mysql
+    DB_PORT=3306
+    - DB_DATABASE=laravel
+    - DB_USERNAME=root
+    - DB_PASSWORD=
+    + DB_DATABASE=laravel_db
+    + DB_USERNAME=laravel_user
+    + DB_PASSWORD=laravel_pass
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+// 後略
 
-## Code of Conduct
+### 6 マイグレーションを実施してください
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    php artisan migrate
+    ここでデーターベースに作成されているか確認することをおすすめします
 
-## Security Vulnerabilities
+### 7 シーディング実施してください
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    php artisan db:seed
 
-## License
+## 使用技術(実装環境)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    PHP version 8.1.34
+    Laravel Framework 8.83.29
+    Composer version 2.9.5
+    mysql from 11.8.3-MariaDB
+    git version 2.43.0
+
+## ER図
+
+    ![alt text](image.png)
+
+## URL
+
+    お問い合わせ画面(http://localhost/)
+    確認画面
+    ユーザー登録画面
+    ログイン画面
+    phpMyAdmin

@@ -56,7 +56,18 @@
                 <td>{{ $contact->gender_label }}</td>
                 <td>{{ $contact->email }}</td>
                 <td>{{ $contact->category->content }}</td>
-                <td><button>詳細</button></td>
+                <td>
+                    <button 
+                        class="detail-btn"
+                        data-id="{{ $contact->id }}"
+                        data-name="{{ $contact->last_name }} {{ $contact->first_name }}"
+                        data-email="{{ $contact->email }}"
+                        data-gender="{{ $contact->gender_label }}"
+                        data-detail="{{ $contact->detail }}"
+                        data-category="{{ $contact->category->content }}">
+                        詳細
+                    </button>
+                </td>
             </tr>
             @endforeach
         </tbody>
@@ -67,4 +78,43 @@
     </div>
 
 </div>
+
+<!-- モーダル用 -->
+<div class="modal" id="detailModal" tabindex="-1" role="dialog">
+
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">詳細</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p><strong>名前：</strong> <span id="modal-name"></span></p>
+        <p><strong>メール：</strong> <span id="modal-email"></span></p>
+        <p><strong>性別：</strong> <span id="modal-gender"></span></p>
+        <p><strong>カテゴリ：</strong> <span id="modal-category"></span></p>
+        <p><strong>詳細：</strong> <span id="modal-detail"></span></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- モーダルの中身 -->
+<script>
+document.querySelectorAll('.detail-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.getElementById('modal-name').textContent = btn.dataset.name;
+        document.getElementById('modal-email').textContent = btn.dataset.email;
+        document.getElementById('modal-gender').textContent = btn.dataset.gender;
+        document.getElementById('modal-category').textContent = btn.dataset.category;
+        document.getElementById('modal-detail').textContent = btn.dataset.detail;
+
+        $('#detailModal').modal('show');
+    });
+});
+</script>
+
 @endsection

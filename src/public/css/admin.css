@@ -45,3 +45,11 @@
 .logout__button{
     
 }
+
+.modal-content{
+    background-color: white;
+    padding: 20px;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 10pxl;
+}
