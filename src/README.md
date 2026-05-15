@@ -53,7 +53,7 @@ DB_PASSWORD=laravel_pass
 php artisan migrate
 ```
 
--ここでデーターベースに作成されているか確認することをおすすめします
+ここでデーターベースに作成されているか確認することをおすすめします
 
 ### 7 シーディング実施してください
 
@@ -79,4 +79,4 @@ php artisan db:seed
 - 確認画面: http://localhost/confirm
 - ユーザー登録画面: http://localhost/register
 - ログイン画面: http://localhost/login
-- phpMyAdmin:
+- phpMyAdmin: http://localhost:8080/
