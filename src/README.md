@@ -6,7 +6,7 @@
 
 ### 1 リポジトリをクローンする
 
-'''bash
+```bash
 git clone https://github.com/takahiro61202-cyber/form-test.git
 
 ### 2 Dockerのコンテナを作成します
@@ -69,3 +69,4 @@ git version 2.43.0
 ユーザー登録画面(http://localhost/register)
 ログイン画面(http://localhost/login)
 phpMyAdmin(http://localhost:8080/)
+```
