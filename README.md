@@ -69,7 +69,7 @@ php artisan db:seed
 
 ## ER図
 
-![alt text](image.png)
+![alt text](ER.png)
 
 ## URL
 
