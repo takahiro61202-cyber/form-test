@@ -31,15 +31,13 @@ cp .env.example .env
 
 ### 5 envファイルの下記の欄を修正してください
 
-```env
+```bash
 DB_CONNECTION=mysql
-
 # before
 DB_HOST=127.0.0.1
 DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=
-
 # after
 DB_HOST=mysql
 DB_DATABASE=laravel_db
