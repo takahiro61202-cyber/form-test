@@ -23,8 +23,15 @@ public function confirm(ContactRequest $request)
     $contact->telA = $request->telA;
     $contact->telB = $request->telB;
     $contact->telC = $request->telC;
+
+    $contact->first_name = $request->first_name;
+    $contact->last_name = $request->last_name;
+    
     // 電話番号を合体
     $contact->tel = $request->telA . $request->telB . $request->telC;
+
+    // 名前を合体
+    $contact->name = $request->first_name . $request->last_name;
 
     // カテゴリのリレーションをセット
     $contact->setRelation('category', Categories::find($request->category_id));

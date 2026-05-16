@@ -2,21 +2,21 @@
 @section('links')
 <a href="/register">register</a>
 @endsection
-@section('page_title','login')
+@section('page_title','Login')
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/auth-common.css') }}">
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 @endsection
 
 @section('content')
+
+
 <div class="white-box">
   <div class="login-form__content">
-    <div class="login-form__heading">
-      <h2>ログイン</h2>
-    </div>
     <form class="form" action="{{ route('login') }}" method="POST">
+  </div>
   @csrf
-      </div>
+      
       <div class="form__group">
         <div class="form__group-title">
           <span class="form__label--item">メールアドレス</span>

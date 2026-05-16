@@ -16,8 +16,7 @@
                 <tr>
                     <td class="table__title">お名前</td>
                     <td>
-                        <input type="text" value="{{ $contact->last_name }}" readonly>
-                        <input type="text" value="{{ $contact->first_name }}" readonly>
+                        <input type="text" value="{{ $contact->name }}" readonly>
 
                         {{-- hidden --}}
                         <input type="hidden" name="last_name" value="{{ $contact->last_name }}">
@@ -107,13 +106,13 @@
                 </tr>
 
             </table>
-        </div>
 
-        <div class="confirm-buttons">
-            <button class="send" type="submit" name="action" value="send">送信</button>
-            <button class="mod" type="submit" name="action" value="mod">修正</button>
-        </div>
 
+            <div class="confirm-buttons">
+                <button class="send" type="submit" name="action" value="send">送信</button>
+                <button class="mod" type="submit" name="action" value="mod">修正</button>
+            </div>
+        </div>
     </form>
 </div>
 @endsection

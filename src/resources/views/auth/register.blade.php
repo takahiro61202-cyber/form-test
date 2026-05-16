@@ -2,6 +2,7 @@
 @section('links')
 <a href="/login">login</a>
 @endsection
+@section('page_title','Register')
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/auth-common.css') }}">
 <link rel="stylesheet" href="{{ asset('css/register.css') }}">
@@ -11,9 +12,6 @@
 @section('content')
 <div class="white-box">
   <div class="register-form__content">
-    <div class="register-form__heading">
-      <h2>会員登録</h2>
-    </div>
     <form class="form" action="/register" method="post">
       @csrf
       <div class="form__group">
@@ -58,16 +56,6 @@
             @error('password')
             {{ $message }}
             @enderror
-          </div>
-        </div>
-      </div>
-      <div class="form__group">
-        <div class="form__group-title">
-          <span class="form__label--item">確認用パスワード</span>
-        </div>
-        <div class="form__group-content">
-          <div class="form__input--text">
-            <input type="password" name="password_confirmation" />
           </div>
         </div>
       </div>

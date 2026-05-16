@@ -24,6 +24,9 @@
     </div>
   </header>
 
+  <h2 class="main__font">
+  @yield('page_title')
+  </h2>
 
   <main>
     @yield('content')
