@@ -6,6 +6,8 @@
 
 ### 1 リポジトリをクローンする
 
+今回はテストなので個人のリポジトリのurlを変更してください
+
 ```bash
 git clone https://github.com/takahiro61202-cyber/form-test.git
 ```
@@ -23,10 +25,14 @@ docker-compose exec php bash
 composer install
 ```
 
-### 4 envファイルを作成してください
+### 4 envファイルとアプリキーを作成してください
 
 ```bash
 cp .env.example .env
+```
+
+```bash
+php artisan key:generate
 ```
 
 ### 5 envファイルの下記の欄を修正してください
@@ -52,6 +58,11 @@ php artisan migrate
 ```
 
 ここでデーターベースに作成されているか確認することをおすすめします
+エラーが発生する場合は以下のコマンドを試してください
+
+```bash
+sudo chmod -R 777 *
+```
 
 ### 7 シーディング実施してください
 
